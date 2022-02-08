@@ -4,11 +4,11 @@ Este projeto tem por objetivo apurar a localização atual do dispositivo e cons
 <h2>Screens</h2>
 <table>
   <tr>
-    <td><img src="https://github.com/nosphera/builders-weather/blob/main/screenshots/01.jpeg" style="height: 640px" /></td>
-    <td><img src="https://github.com/nosphera/builders-weather/blob/main/screenshots/02.jpeg" style="height: 640px"/></td>
-    <td><img src="https://github.com/nosphera/builders-weather/blob/main/screenshots/05.jpeg" style="height: 640px"/></td>
-    <td><img src="https://github.com/nosphera/builders-weather/blob/main/screenshots/04.jpeg" style="height: 640px"/></td>
-    <td><img src="https://github.com/nosphera/builders-weather/blob/main/screenshots/03.jpeg" style="height: 640px"/></td>
+    <td><img src="https://github.com/nosphera/builders-weather/blob/main/screenshots/01.jpeg" /></td>
+    <td><img src="https://github.com/nosphera/builders-weather/blob/main/screenshots/02.jpeg" /></td>
+    <td><img src="https://github.com/nosphera/builders-weather/blob/main/screenshots/03.jpeg" /></td>
+    <td><img src="https://github.com/nosphera/builders-weather/blob/main/screenshots/04.jpeg" /></td>
+    <td><img src="https://github.com/nosphera/builders-weather/blob/main/screenshots/05.jpeg" /></td>
   </tr>
 </table>
 
