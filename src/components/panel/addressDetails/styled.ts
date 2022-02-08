@@ -4,11 +4,22 @@ import styled from 'styled-components/native';
 
 export const Container = styled.View`
   align-items: flex-end;
-  max-width: 60%;
+  max-width: 280px;
+  padding:4px;
 `;
 
 export const Text = styled.Text`
+  color: #434343;
   flex-shrink: 1;
+  font-weight: 700;
+`;
+
+export const NeighborgoodText = styled(Text)`
+  font-size: 24;
+`;
+
+export const ZipText = styled(Text)`
+  font-size: 18px;
 `;
 
 export const Label = styled.Text`
@@ -18,5 +29,5 @@ export const Label = styled.Text`
 const ShimmerPlaceholder = createShimmerPlaceholder(LinearGradient);
 export const Shimmer = styled(ShimmerPlaceholder)`
   border-radius: 18px;
-  margin-bottom: 4px;
+  margin-bottom: ${({visible}) => (visible ? '0' : '4')}px;
 `;

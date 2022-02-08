@@ -1,6 +1,6 @@
 import React from 'react';
-import {SafeAreaView, StatusBar, useColorScheme, View} from 'react-native';
-import styles from './styles';
+import {Image, SafeAreaView, StatusBar, useColorScheme, View} from 'react-native';
+import styles, { BackgroundImage } from './styles';
 import {Colors} from 'react-native/Libraries/NewAppScreen';
 import Panel from '../../components/panel';
 import {IHomeComponent} from '../../business/interfaces/IHomeComponent';
@@ -25,8 +25,10 @@ const HomeComponent: React.FC<any> = ({
   const _setPosition = (pos: any) => {
     setPosition({...position, ...pos});
   };
+  const img = require('../../images/clima1.png');
   return (
     <SafeAreaView style={[styles.container, backgroundStyle]}>
+      <BackgroundImage source={img} resizeMethod="resize" />
       <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
       <SeachBar
         handleSearch={handleSearch}

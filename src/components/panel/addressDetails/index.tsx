@@ -3,7 +3,7 @@ import React from 'react';
 import {weekDay} from '../../../business/enum/weekDays';
 import {IAddress} from '../../../business/interfaces/iAddress';
 import {IBaseProps} from '../../../business/interfaces/iBaseProps';
-import {Container, Shimmer, Text} from './styled';
+import {Container, NeighborgoodText, Shimmer, Text, ZipText} from './styled';
 
 interface IProps extends IBaseProps {
   address?: IAddress;
@@ -12,7 +12,7 @@ const AddressDetails = ({address, loading}: IProps) => {
   return (
     <Container>
       <Shimmer visible={!loading}>
-        <Text>{address?.neighborhood}</Text>
+        <NeighborgoodText>{address?.neighborhood}</NeighborgoodText>
       </Shimmer>
       <Shimmer visible={!loading}>
         <Text>
@@ -20,7 +20,7 @@ const AddressDetails = ({address, loading}: IProps) => {
         </Text>
       </Shimmer>
       <Shimmer visible={!loading}>
-        <Text>{address?.zip}</Text>
+        <ZipText >{address?.zip}</ZipText>
       </Shimmer>
       <Shimmer visible={!loading}>
         <Text>
