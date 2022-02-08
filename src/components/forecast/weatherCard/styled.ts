@@ -12,8 +12,8 @@ export const HeaderContainer = styled.View`
 `;
 
 export const Icon = styled.Image`
-  height: 48;
-  width: 48;
+  height: 48px;
+  width: 48px;
 `;
 
 export const TemperatureContainer = styled.View`
