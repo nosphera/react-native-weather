@@ -6,7 +6,7 @@ const styles = StyleSheet.create({
     width: '100%',
   },
   map: {
-    height: '40%',
+    height: '30%',
     width: '100%',
   },
 });

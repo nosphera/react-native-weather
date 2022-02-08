@@ -1,6 +1,6 @@
 interface IWeatherData {
-    dt?: Date
-    weather?: any[]
+  dt?: Date;
+  weather?: any[];
 }
 
-export default IWeatherData
+export default IWeatherData;

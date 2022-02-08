@@ -10,10 +10,10 @@
 
 import moment from 'moment';
 import React from 'react';
-import Home from './pages/Home'
+import Home from './pages/Home';
 const App = () => {
   moment.locale('pt-br');
-  return (<Home/>)
+  return <Home />;
 };
 
 export default App;

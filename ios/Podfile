@@ -12,6 +12,7 @@ target 'localizacao' do
     :hermes_enabled => false
   )
 
+
   target 'localizacaoTests' do
     inherit! :complete
     # Pods for testing

@@ -1,8 +1,13 @@
-import { IPosition } from "./iPosition";
+import {IBaseProps} from './iBaseProps';
+import {ICity} from './iCity';
+import {IPosition} from './iPosition';
 
-export interface IHomeComponent {
-    position: IPosition, 
-    setPosition: ()=>void,
-    weatherData: any
-    address: any
+export interface IHomeComponent extends IBaseProps {
+  position: IPosition;
+  setPosition: (position: IPosition) => void;
+  refresh: () => void;
+  handleSearch: (query: string) => void;
+  weatherData: any;
+  address: any;
+  cities?: ICity[];
 }

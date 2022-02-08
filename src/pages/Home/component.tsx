@@ -1,23 +1,42 @@
-import React, { useState } from 'react';
-import {SafeAreaView, StatusBar, useColorScheme} from 'react-native';
+import React from 'react';
+import {SafeAreaView, StatusBar, useColorScheme, View} from 'react-native';
 import styles from './styles';
 import {Colors} from 'react-native/Libraries/NewAppScreen';
-import {SwipeablePanel} from 'rn-swipeable-panel';
 import Panel from '../../components/panel';
 import {IHomeComponent} from '../../business/interfaces/IHomeComponent';
-import Map from '../../components/map';
+import SeachBar from '../../components/search/searchBar';
+import RefreshButton from '../../components/refreshButton';
 
-const HomeComponent: React.FC<any> = ({position, setPosition, weatherData,address}: IHomeComponent) => {
+const HomeComponent: React.FC<any> = ({
+  position,
+  setPosition,
+  weatherData,
+  address,
+  refresh,
+  handleSearch,
+  cities,
+  loading,
+}: IHomeComponent) => {
   const isDarkMode = useColorScheme() === 'dark';
-  const [openPanel, setOpenPanel] = useState(true)
   const backgroundStyle = {
     backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
+  };
+
+  const _setPosition = (pos: any) => {
+    setPosition({...position, ...pos});
   };
   return (
     <SafeAreaView style={[styles.container, backgroundStyle]}>
       <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
-      <Map {...{position, setPosition}} />      
-      <Panel {...{position,weatherData,address}} /> 
+      <SeachBar
+        handleSearch={handleSearch}
+        onSelect={_setPosition}
+        cities={cities}
+      />
+      <View style={{flexDirection: 'row', justifyContent: 'flex-end'}}>
+        <RefreshButton onPress={refresh} loading={loading} />
+      </View>
+      <Panel {...{position, weatherData, address, loading}} />
     </SafeAreaView>
   );
 };

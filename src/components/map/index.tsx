@@ -1,12 +1,8 @@
-import React, {useState} from 'react';
-import {useColorScheme} from 'react-native';
+import React from 'react';
 import styles from './styles';
 import MapView, {Marker} from 'react-native-maps';
 
 const Map: React.FC<any> = ({position, setPosition}: any) => {
-  const isDarkMode = useColorScheme() === 'dark';
-  const [errorMsg, setErrorMsg] = useState(null);
-
   return (
     <MapView
       style={styles.map}
@@ -15,14 +11,7 @@ const Map: React.FC<any> = ({position, setPosition}: any) => {
       showsUserLocation={false} //destacando a localização do usuário no mapa
       showsMyLocationButton={true}
       toolbarEnabled={true}
-      onPress={e =>
-        setPosition({
-          ...position,
-          latitude: e.nativeEvent.coordinate.latitude,
-          longitude: e.nativeEvent.coordinate.longitude,
-        })
-      }
-    >
+      onPress={e => {}}>
       <Marker
         coordinate={position}
         title={'Marcador'}
