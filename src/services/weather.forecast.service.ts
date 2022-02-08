@@ -7,11 +7,15 @@ import {
 
 const WeatherForecastService = {
   getForecast: (position: IPosition) => {
+    debugger
     return fetch(
       `https://api.openweathermap.org/data/2.5/onecall?exclude=minutely&lat=${position.latitude}&lon=${position.longitude}&appid=${REACT_APP_WEATHER_KEY}&units=metric&lang=pt_br`,
     )
       .then(response => response.json())
-      .catch(error => console.log('error', error));
+      .catch(error =>{
+        debugger
+         console.log('error', error)
+      });
   },
   searchCities: (query: string) => {
     return fetch(

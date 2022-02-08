@@ -12,8 +12,8 @@ import {IBaseProps} from '../../business/interfaces/iBaseProps';
 import PanelHeader from './header';
 import RenderDailyItem from './renderDailyItem';
 import RenderHourlyItem from './renderHourlyItem';
-import RenderWarnings from './addressDetails copy';
-import {FullAddress, SectionLabel, Shimmer} from './styled';
+import RenderWarnings from './renderWarnings';
+import {FullAddress, SectionLabel, Shimmer, styles} from './styled';
 
 interface IProps extends IBaseProps {
   address: IAddress;
@@ -40,8 +40,8 @@ const Panel: React.FC<any> = ({weatherData, address, loading}: IProps) => {
       <Shimmer visible={!loading}>
         <FullAddress>{address?.formatted_address}</FullAddress>
       </Shimmer>
-      <SectionLabel>Próximas Horas</SectionLabel>
-      <Shimmer visible={!loading} height={96}>
+      <SectionLabel>Próximas 24 Horas</SectionLabel>
+      <Shimmer visible={!loading} height={130}>
         <FlatList
           data={forecastPerHour.slice(0, 24)}
           renderItem={({item}) => <RenderHourlyItem {...{item, loading}} />}
@@ -50,7 +50,7 @@ const Panel: React.FC<any> = ({weatherData, address, loading}: IProps) => {
         />
       </Shimmer>
       <SectionLabel>Para Semana</SectionLabel>
-      <Shimmer visible={!loading} height={96}>
+      <Shimmer visible={!loading} height={130}>
         <FlatList
           data={weatherPerDay}
           renderItem={RenderDailyItem}
@@ -71,11 +71,4 @@ const Panel: React.FC<any> = ({weatherData, address, loading}: IProps) => {
 };
 export default Panel;
 
-const styles = StyleSheet.create({
-  scrollContainer: {
-    padding: 12,
-  },
-  contentContainerStyle: {
-    paddingBottom: 64,
-  },
-});
+

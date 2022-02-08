@@ -1,3 +1,4 @@
+import { StyleSheet } from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
 import {createShimmerPlaceholder} from 'react-native-shimmer-placeholder';
 import styled from 'styled-components/native';
@@ -16,9 +17,19 @@ export const SectionLabel = styled.Text`
 
 const ShimmerPlaceholder = createShimmerPlaceholder(LinearGradient);
 export const Shimmer = styled(ShimmerPlaceholder)`
-  border-radius: 18px;
+  border-radius: 4px;
+  padding: 6px;
   margin-bottom: 4px;
+  background-color: #fff9;
   ${props => (props.visible ? '' : 'width:100%;')}
-  ${props =>
-    !props.visible && props.height ? `height:${props.height}px;` : ''}
+  ${props => (props.height ? `height:${props.height}px;` : '')}
 `;
+
+export const styles = StyleSheet.create({
+  scrollContainer: {
+    padding: 12,
+  },
+  contentContainerStyle: {
+    paddingBottom: 64,
+  },
+});

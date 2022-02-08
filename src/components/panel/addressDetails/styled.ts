@@ -15,7 +15,7 @@ export const Text = styled.Text`
 `;
 
 export const NeighborgoodText = styled(Text)`
-  font-size: 24;
+  font-size: 24px;
 `;
 
 export const ZipText = styled(Text)`

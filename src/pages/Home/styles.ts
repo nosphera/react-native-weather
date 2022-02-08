@@ -7,6 +7,7 @@ export const BackgroundImage = styled.Image`
   left:0px;
   opacity:0.25;
   height:110%;
+  z-index:-10;
 `;
 
 const styles = StyleSheet.create({
