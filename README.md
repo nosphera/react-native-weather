@@ -11,6 +11,7 @@ Este projeto tem por objetivo apurar a localização atual do dispositivo e cons
     <td><img src="https://github.com/nosphera/builders-weather/blob/main/screenshots/03.jpeg" /></td>
   </tr>
 </table>
+
 # Pre-requisitos para rodar:
 
 Os dados climáticos são obtidos a partir da api [OpenWeather](https://openweathermap.org/api), para compilar o aplicativo é necessário obter uma Api Key no site.
