@@ -9,7 +9,7 @@ interface IProps extends IBaseProps {
 const RefreshButton = ({onPress, loading}: IProps) => {
   if (loading) {
     return (
-      <Touchable onPress={onPress}>
+      <Touchable onPress={()=>{}}>
         <ActivityIndicator size={42} marginRight={12} marginTop={12} />
       </Touchable>
     );

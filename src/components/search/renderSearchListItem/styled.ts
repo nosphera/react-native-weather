@@ -16,5 +16,5 @@ export const Icon = styled.Image`
 
 export const Label = styled.Text`
   font-weight: 700;
-  font-size: 16;
+  font-size: 16px;
 `;

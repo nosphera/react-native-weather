@@ -10,6 +10,6 @@ export const Text = styled.Text`
 
 export const Label = styled.Text`
   font-weight: 700;
-  font-size: 16;
+  font-size: 16px;
   color: #fc5e03;
 `;

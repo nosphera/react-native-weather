@@ -9,10 +9,20 @@
  */
 
 import moment from 'moment';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Home from './pages/Home';
+import Splash from './pages/splash';
 const App = () => {
   moment.locale('pt-br');
+  const[firstLoad,setFirstLoad] = useState(true)
+  useEffect(()=>{
+    setTimeout(()=>{
+      setFirstLoad(false)
+    }, 2000)
+  },[])
+  if (firstLoad){
+    return <Splash />
+  }
   return <Home />;
 };
 

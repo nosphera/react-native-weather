@@ -18,7 +18,7 @@ export const Icon = styled(IconMaterial)`
 
 export const Label = styled.Text`
   font-weight: 700;
-  font-size: 16;
+  font-size: 16px;
 `;
 
 const ShimmerPlaceholder = createShimmerPlaceholder(LinearGradient);

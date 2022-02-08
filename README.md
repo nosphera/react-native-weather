@@ -39,4 +39,4 @@ Abra um terminal (terminal, powershell, prompt de comando, atraves do VS Code ..
 Abra o emulador de sua preferência e aguarde o processo de inicialização. Certifique-se que o seu computador detectou o aparelho e que este está com a depuração USB, e a permissão para instalar aplicativos de fonte externa ativadas. No android, para verificar se o aparelho ou emulador foi detectado digite no terminal "adb devices", e serão listados na tela os dispositivos conectados (tanto emulador como físicos) - NÃO CONECTE MAIS DE UM DEVICE AO MESMO TEMPO
 
 # Execute a aplicação
-No Terminal aberto, navegue até o diretório onde estão os fontes e execute "react-native run-android".
+No Terminal aberto, navegue até o diretório onde estão os fontes e execute "npm run android".
